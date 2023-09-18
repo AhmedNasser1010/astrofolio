@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Horizon;
+  src: url("../public/fonts/horizon.otf");
+}
+
+@font-face {
+	font-family: MoonTime;
+	src: url("../public/fonts/moonTime.ttf");
+}
+
+@font-face {
+	font-family: HorizonOutline;
+	src: url("../public/fonts/horizon_outlined.otf");
+}
