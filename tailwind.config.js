@@ -11,9 +11,11 @@ export default {
         'lavenderGray': '#CFCED4',
       },
       fontFamily: {
+        'openSans': ['Open Sans', 'sans-serif'],
         'horizon': ['Horizon', 'sans-serif'],
         'moonTime': ['moonTime', 'sans-serif'],
         'horizonOutline': ['HorizonOutline', 'sans-serif'],
+        'lovelo': ['Lovelo', 'sans-serif'],
       },
     },
   },

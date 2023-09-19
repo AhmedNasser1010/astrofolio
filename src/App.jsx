@@ -9,7 +9,7 @@ import Project from "./Project/Project.jsx";
 
 function App() {
   return (
-    <div className="app">
+    <div className="app font-openSans">
       <Nav />
       <Routes>
         <Route path="" element={<Home />} />

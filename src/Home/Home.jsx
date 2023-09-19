@@ -1,8 +1,6 @@
 import Container from "../Components/Container.jsx";
 import Logo from "../Components/Logo.jsx";
 import HeroText from "./HeroText.jsx";
-import SoundBtn from "../Components/SoundBtn.jsx";
-import SocialBtns from "../Components/SocialBtns.jsx";
 
 function Home() {
 	return (
@@ -11,8 +9,6 @@ function Home() {
 			<Container>
 				<Logo />
 				<HeroText />
-				<SoundBtn />
-				<SocialBtns />
 			</Container>
 		</div>
 	)
