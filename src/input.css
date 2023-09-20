@@ -64,8 +64,17 @@
 }
 /* ^works container div styles^ */
 
+/* perview image animation */
 .preview-img.hovered {
 	transform: translateY(-50%) skewX(0deg);
 	right: 20px;
 	display: block;
 }
+/* ^perview image animation^ */
+
+/* project grid style */
+.project-grid {
+	grid-template-columns: repeat(14, minmax(0, 1fr));
+	grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+/* ^project grid style^ */

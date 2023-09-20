@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 function WorkTitle({ workTitle, year, category, newWork, perviewImg = "https://placehold.co/400x400" }) {
 
-	// remove spaces, cebab-case formater
+	// cebab-case formater
 	function titleFormate(text) {
 		let convertedArr = [];
 
 		text.split(" ").map((txt, index) => {
-			index === 0 ? convertedArr.push(txt) : convertedArr.push("-" + txt);
+			index === 0 ? convertedArr.push(txt.toLowerCase()) : convertedArr.push("-" + txt.toLowerCase());
 		});
 
 		return convertedArr.join("");

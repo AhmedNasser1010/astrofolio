@@ -9,7 +9,7 @@ function Works() {
 				<h1 className="font-horizon text-3xl md:text-4xl pl-6 pt-6">SELECTED WORKS</h1>
 				<div className="works-container h-[calc(100%-2rem)] md:h-[100%]">
 					<div className="works-scroll-container pl-6 pt-11 flex flex-col overflow-y-scroll h-[calc(100%-64px)]">
-						<WorkTitle workTitle="todo list" year="2023" category="Productivity" newWork={true} perviewImg="https://placehold.co/400x400" />
+						<WorkTitle workTitle="Todo list" year="2023" category="Productivity" newWork={true} perviewImg="https://placehold.co/400x400" />
 						<WorkTitle workTitle="davon" year="2023" category="Landing Page" perviewImg="https://placehold.co/400x401" />
 						<WorkTitle workTitle="wtls toolkit" year="2022" category="Tool" perviewImg="https://placehold.co/400x402" />
 						<WorkTitle workTitle="dashboard" year="2022" category="Admin Panel" perviewImg="https://placehold.co/400x403" />
