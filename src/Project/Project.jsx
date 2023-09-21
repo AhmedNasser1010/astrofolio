@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import works from "../works.js";
 
@@ -30,10 +30,6 @@ function Project() {
 		})
 	}, [])
 
-	useEffect(() => {
-		console.log(project.imgs);
-	}, [project])
-
 	return (
 		<div className="project overflow-hidden bg-midnightBlack">
 			<Container>
@@ -49,7 +45,8 @@ function Project() {
 					<h1 className="grid col-start-[5] col-end-[15] row-start-[3] row-end-[4] font-horizon text-6xl hover:-skew-x-12 hover:translate-x-6 duration-300 cursor-pointer">{ project.title && project.title }</h1>
 					<p className="grid col-start-[7] col-end-[15] row-start-[4] row-end-[6]">{ project.description && project.description }</p>
 					<a className="col-start-[9] col-end-[11] row-start-[6] row-end-[7] border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px]" href={project.liveLink ? project.liveLink : "#"}>Live View</a>
-					<a className="col-start-[11] col-end-[13] row-start-[6] row-end-[7] border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px]" href={project.github ? project.github : "#"}>Github</a>
+					<a className="col-start-[11] col-end-[13] row-start-[6] row-end-[7] border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px] translate-x-[calc(-16%+5px)]" href={project.github ? project.github : "#"}>Github</a>
+					<Link to="/work" className="col-start-[9] col-end-[10] row-start-[6] row-end-[7] border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px] w-1/2 translate-x-[calc(-100%-5px)]">{`<`}</Link>
 				</div>
 			</Container>
 		</div>

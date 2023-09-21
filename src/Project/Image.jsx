@@ -8,12 +8,9 @@ function Image({ img, alt, colStartEnd, rowStartEnd }) {
 			hover:scale-150
 
 		`}>
-			<img src={img} alt={alt} className="rounded-[35px] m-auto max-h-full absolute top-1/2 -translate-y-1/2" />
+			<img src={img} alt={alt} className="duration-300 rounded-[35px] hover:rounded m-auto max-h-full absolute top-1/2 -translate-y-1/2" />
 		</div>
 	)
 }
 
 export default Image;
-
-
-// style={{backgroundImage: `url('${img}')`}}
