@@ -23,8 +23,8 @@ function SoundBtn() {
 
 	return (
 		<div className="absolute top-[calc(100%-20px)] left-[-25px] cursor-pointer" onClick={handleSoundClick}>
-			<i className="fa-solid fa-volume-high absolute top-[-2px] left-[7px] text-xs rotate-90 !hidden"></i>
-			<i className="fa-solid fa-volume-off absolute top-[-5px] left-[11px] text-xs rotate-90"></i>
+			<i className="fa-solid fa-volume-high absolute top-[3px] left-[6px] text-xs rotate-90 !hidden"></i>
+			<i className="fa-solid fa-volume-off absolute top-[0px] left-[10px] text-xs rotate-90"></i>
 			<span className="absolute top-[-33px] left-[-6px] text-xs rotate-90">Sounds</span>
 		</div>
 	)

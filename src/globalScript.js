@@ -3,7 +3,6 @@ const bgAudio = new Audio("../public/sounds/background-sound.mp3");
 
 bgAudio.loop = true;
 bgAudio.volume = 0.1;
-bgAudio.autoplay = true;
 // ^background music^
 
 // sound click

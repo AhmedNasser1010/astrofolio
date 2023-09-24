@@ -1,14 +1,12 @@
-function Image({ img, alt, colStartEnd, rowStartEnd }) {
+function Image({ img, alt, colStartEnd, rowStartEnd, clickEvent }) {
 	return (
 		<div className={`
 			image-container
 			${colStartEnd} ${rowStartEnd}
-			bg-[url('${img}')] bg-no-repeat bg-contain
-			relative cursor-pointer duration-300
-			hover:scale-150
+			md:relative cursor-pointer duration-300
 
 		`}>
-			<img src={img} alt={alt} className="duration-300 rounded-[35px] hover:rounded m-auto max-h-full absolute top-1/2 -translate-y-1/2" />
+			<img onClick={clickEvent} src={img} alt={alt} className="duration-300 rounded-xl hover:rounded m-auto max-h-full md:absolute top-1/2 md:-translate-y-1/2" />
 		</div>
 	)
 }

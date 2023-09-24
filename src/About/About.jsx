@@ -5,8 +5,8 @@ function About() {
 	return (
 		<div className="about bg-midnightBlack overflow-hidden">
 			<Container>
-				<h1 className="text-center pt-20 md:pt-10 pb-14 font-bold text-2xl md:text-3xl">Hi there. Nice to meet you.</h1>
-				<div className="flex px-10 gap-x-20 flex-col md:flex-row text-center md:text-left">
+				<h1 className="text-center pt-20 md:pt-10 pb-14 font-bold text-2xl md:text-3xl"><span className="block md:inline">Hi there.</span> Nice to meet you.</h1>
+				<div className="flex pb-10 md:pb-0 px-10 gap-x-20 flex-col md:flex-row text-center md:text-left">
 					<div className="aboutMe w-full md:w-1/2 mb-16 md:mb-0">
 						<h3 className="font-bold text-xl md:text-[25px] pb-4">Get To Know Me!</h3>
 						<p className="md:w-10/12 text-[15px] leading-7">

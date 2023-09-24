@@ -25,16 +25,16 @@
 }
 
 /* works container div styles */
-.works-scroll-container::-webkit-scrollbar {
+.scroll-none::-webkit-scrollbar {
 	display: none;
 }
 
-.works-scroll-container {
+.scroll-none {
 	scrollbar-width: none;
 }
 
-.works-container::before,
-.works-container::after {
+.overflow-scroll-y-shadow::before,
+.overflow-scroll-y-shadow::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -44,24 +44,22 @@
   pointer-events: none;
 }
 
-.works-container::before {
+.overflow-scroll-y-shadow::before {
 	-webkit-box-shadow: inset 0px -190px 93px -144px #131313;
 	-moz-box-shadow: inset 0px -190px 93px -144px #131313;
 	box-shadow: inset 0px -190px 93px -144px #131313;
 }
 
-.works-container::after {
+.overflow-scroll-y-shadow::after {
 	-webkit-box-shadow: inset 0px 115px 93px -144px #131313;
 	-moz-box-shadow: inset 0px 115px 93px -144px #131313;
 	box-shadow: inset 0px 115px 93px -144px #131313;
+}
+
+.works-container.overflow-scroll-y-shadow::after {
 	top: 64px;
 }
 
-@media (max-width: 640px) {
-	.works-container::after {
-		top: 90px;
-	}
-}
 /* ^works container div styles^ */
 
 /* perview image animation */
@@ -76,5 +74,184 @@
 .project-grid {
 	grid-template-columns: repeat(14, minmax(0, 1fr));
 	grid-template-rows: repeat(7, minmax(0, 1fr));
+
+/*	grid-template-columns: repeat(14, minmax(0, 1fr));
+	grid-template-rows: repeat(10, minmax(0, 1fr));
+	margin-top: 6rem;*/
+}
+
+@media (min-width: 640px) and (max-width: 1200px) {
+	.project-grid {
+		grid-template-rows: repeat(10, minmax(0, 1fr));
+		margin-top: 6rem;
+	}
+	.project-grid h1 {
+		font-size: 30px;
+	}
+	.project-grid .live,
+	.project-grid .github,
+	.project-grid .backBtn {
+		height: 35px;
+	}
+	.project-grid .image-container img {
+		border-radius: 15px;
+	}
+}
+
+@media (max-width: 640px) {
+	.overflow-scroll-y-shadow-sm::before,
+	.overflow-scroll-y-shadow-sm::after {
+		content: "";
+		position: absolute;
+		top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	pointer-events: none;
+	}
+	.overflow-scroll-y-shadow-sm::before {
+		-webkit-box-shadow: inset 0px -190px 93px -144px #131313;
+		-moz-box-shadow: inset 0px -190px 93px -144px #131313;
+		box-shadow: inset 0px -190px 93px -144px #131313;
+	}
+	.overflow-scroll-y-shadow-sm::after {
+		-webkit-box-shadow: inset 0px 115px 93px -144px #131313;
+		-moz-box-shadow: inset 0px 115px 93px -144px #131313;
+		box-shadow: inset 0px 115px 93px -144px #131313;
+	}
+	
+	.works-container.overflow-scroll-y-shadow::after {
+		top: 85px;
+	}
+
+	.images-flex.overflow-scroll-y-shadow-sm::after {
+		top: 17rem;
+	}
+	.works-container::after {
+		top: 90px;
+	}
 }
 /* ^project grid style^ */
+
+/* expand the image styles */
+.slick-track {
+	height: 100vh;
+}
+
+.slide-content {
+	position: relative;
+  top: 280px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width: 30%;
+}
+
+.slick-dots {
+	top: 80%;
+}
+
+.slick-dots li {
+	width: 40px !important;
+	height: 40px !important;
+	transition: 0.3s;
+}
+
+.slick-dots li.slick-active {
+	transform: scale(1.2);
+}
+
+.slick-dots li button::before {
+	color: white !important;
+}
+
+.controls {
+	top: 50%;
+  transform: translateY(-100%);
+  position: absolute;
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+	width: 100%;
+	padding: 0 300px;
+	font-size: 100px;
+	color: rgb(0 0 0 / 50%);
+	z-index: 10;
+}
+
+.controls button {
+	cursor: pointer;
+}
+
+@media (min-width: 640px) and (max-width: 1200px) {
+	.slide-content {
+		width: 35%;
+	}
+	.controls {
+		padding: 0 200px;
+	}
+}
+
+@media (max-width: 640px) {
+	.slide-content {
+		width: 75%;
+	}
+	.controls {
+		display: none;
+	}
+	.slick-dots {
+		width: 60% !important;
+    left: 50%;
+    transform: translateX(-50%);
+	}
+}
+
+
+.images-slider.exited {
+  animation-name: exited;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+	display: none;
+}
+
+.images-slider.entred {
+	animation-name: entred;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+	display: block;
+}
+
+@keyframes exited {
+  0% {
+		display: block;
+    opacity: 1;
+		transform: scale(1);
+  }
+	99% {
+		display: block;
+		opacity: 0;
+		transform: scale(1.1);
+	}
+  100% {
+		opacity: 0;
+		transform: scale(1.1);
+		display: none;
+  }
+}
+
+@keyframes entred {
+  0% {
+    opacity: 0;
+		transform: scale(1.1);
+  }
+	99% {
+		opacity: 1;
+		transform: scale(1);
+	}
+  100% {
+		opacity: 1;
+		transform: scale(1);
+  }
+}
+/* ^expand the image styles^ */

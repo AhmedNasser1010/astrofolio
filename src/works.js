@@ -1,3 +1,23 @@
+// template
+// {
+	// title: "",
+	// description: "",
+	// imgs: [
+		// "",
+		// "",
+		// "",
+		// "",
+		// "",
+		// "",
+		// "",
+		// ""
+	// ],
+	// categories: [],
+	// technologys: ["HTML", "CSS", "JavaScript", "React.JS"],
+	// liveLink: "",
+	// github: "",
+// }
+
 const works = [
 	{
 		title: "ToDo List",
@@ -12,6 +32,8 @@ const works = [
 			"https://placehold.co/400x400",
 			"https://placehold.co/400x400"
 		],
+		categories: ["Prodactivity", "Other"],
+		technologys: ["HTML", "CSS", "JS", "React.JS"],
 		liveLink: "#",
 		github: "#",
 	},
@@ -28,6 +50,8 @@ const works = [
 			"https://placehold.co/400x400",
 			"https://placehold.co/400x400"
 		],
+		categories: ["Prodactivity", "Other"],
+		technologys: ["HTML", "CSS", "JS", "React.JS"],
 		liveLink: "#",
 		github: "#",
 	},
@@ -44,6 +68,8 @@ const works = [
 			"https://placehold.co/400x400",
 			"https://placehold.co/400x400"
 		],
+		categories: ["Prodactivity", "Other"],
+		technologys: ["HTML", "CSS", "JS", "React.JS"],
 		liveLink: "#",
 		github: "#",
 	},
@@ -60,6 +86,8 @@ const works = [
 			"https://placehold.co/400x400",
 			"https://placehold.co/400x400"
 		],
+		categories: ["Prodactivity", "Other"],
+		technologys: ["HTML", "CSS", "JS", "React.JS"],
 		liveLink: "#",
 		github: "#",
 	},
@@ -76,6 +104,8 @@ const works = [
 			"https://placehold.co/400x400",
 			"https://placehold.co/400x400"
 		],
+		categories: ["Prodactivity", "Other"],
+		technologys: ["HTML", "CSS", "JS", "React.JS"],
 		liveLink: "#",
 		github: "#",
 	},
