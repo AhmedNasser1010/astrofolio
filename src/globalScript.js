@@ -2,7 +2,21 @@
 const bgAudio = new Audio("../public/sounds/background-sound.mp3");
 
 bgAudio.loop = true;
+bgAudio.muted = true;
 bgAudio.volume = 0.1;
+
+// sounds on/off
+function volOnOff() {
+	const volOn = document.querySelector(".vol-on");
+	const volOff = document.querySelector(".vol-off");
+	
+	bgAudio.play();
+	bgAudio.muted = !bgAudio.muted;
+	
+	volOn.classList.toggle("!hidden");
+	volOff.classList.toggle("!hidden");
+	
+}
 // ^background music^
 
 // sound click
@@ -22,6 +36,12 @@ document.addEventListener("click", e => {
 })
 // ^sound click^
 
+// noise sound effect
+const noiseEffect = new Audio("../public/sounds/radio-static.mp3");
+// ^noise sound effect^
+
 export {
-	bgAudio
+	bgAudio,
+	volOnOff,
+	noiseEffect
 }

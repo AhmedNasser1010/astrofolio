@@ -24,6 +24,14 @@
 	src: url("../public/fonts/lovelo.otf");
 }
 
+body {
+	background-color: #131313;
+}
+
+.pinter-none {
+	pointer-events: none;
+}
+
 /* works container div styles */
 .scroll-none::-webkit-scrollbar {
 	display: none;

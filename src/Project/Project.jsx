@@ -83,7 +83,7 @@ function Project() {
 		<div className="project h-screen overflow-hidden bg-midnightBlack relative">
 			<Container>
 				<div className="project-grid hidden overflow-scroll-y-shadow-sm scroll-none overflow-y-scroll md:overflow-visible md:grid md:gap-x-6 md:gap-y-8 h-[calc(100vh-6rem)] md:h-[calc(100%-4rem)] w-10/12 mt-8 mx-auto">
-					<h1 className="grid text-center md:text-left col-start-[5] col-end-[15] row-start-[3] row-end-[4] font-horizon text-2xl md:text-6xl hover:-skew-x-12 hover:translate-x-6 duration-300 cursor-pointer">{ project.title && project.title }</h1>
+					<h1 data-text={ project.title } className="glitch grid text-center md:text-left col-start-[5] col-end-[15] row-start-[3] row-end-[4] font-horizon text-2xl md:text-6xl hover:-skew-x-12 hover:translate-x-6 duration-300 cursor-pointer">{ project.title }</h1>
 					<div className="grid text-center text-xs md:text-sm md:text-left col-start-[7] col-end-[15] row-start-[4] row-end-[6]">
 						<p>{ project.description && project.description }</p>
 						<div className="info w-fit">
@@ -105,7 +105,7 @@ function Project() {
 					<Image clickEvent={() => onEntr(7)} img={project.imgs ? project.imgs[7] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[7] col-end-[9]" rowStartEnd="row-start-[6] row-end-[8]" />
 				</div>
 				<div className="project-flex flex flex-col md:hidden justify-between items-center h-[calc(100vh-6rem)] w-10/12 mt-8 mx-auto">
-					<h1 className="w-full text-center font-horizon text-2xl hover:-skew-x-12 hover:translate-x-6 duration-300 cursor-pointer">{ project.title && project.title }</h1>
+					<h1 data-text={ project.title } className="glitch w-full text-center font-horizon text-2xl duration-300 cursor-pointer">{ project.title && project.title }</h1>
 					<div className="text-center text-xs">
 						<p className="py-10">{ project.description && project.description }</p>
 						<div className="info py-4">

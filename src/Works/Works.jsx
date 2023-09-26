@@ -4,7 +4,7 @@ import Preview from './Preview.jsx';
 
 function Works() {
 	return (
-		<div className="works overflow-hidden bg-midnightBlack h-screen">
+		<div className="work overflow-hidden bg-midnightBlack h-screen">
 			<Container>
 				<h1 className="font-horizon text-2xl md:text-4xl pl-6 pt-6"><span className="block md:inline">SELECTED</span> WORKS</h1>
 				<div className="
