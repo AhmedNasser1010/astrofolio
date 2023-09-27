@@ -1,8 +1,9 @@
-function Image({ img, alt, colStartEnd, rowStartEnd, clickEvent }) {
+function Image({ img, alt, colStartEnd, rowStartEnd, clickEvent, animation }) {
 	return (
 		<div className={`
 			image-container
 			${colStartEnd} ${rowStartEnd}
+			${animation}
 			md:relative cursor-pointer duration-300
 
 		`}>

@@ -32,6 +32,18 @@ body {
 	pointer-events: none;
 }
 
+.anim-duration-1000ms {
+	animation-duration: 1000ms;
+}
+
+.anim-duration-300ms {
+	animation-duration: 300ms;
+}
+
+.anim-forward {
+	animation-fill-mode: forwards;
+}
+
 /* works container div styles */
 .scroll-none::-webkit-scrollbar {
 	display: none;

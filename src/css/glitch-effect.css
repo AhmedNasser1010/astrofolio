@@ -1,7 +1,8 @@
-.glitch {
+.glitch,
+.glitch-hover {
   position: relative;
   color: white;
-  animation: none;
+  /* animation: none; */
 }
 
 /* glitch skew is canceled for now */
@@ -11,8 +12,10 @@
 }
 */
 
-.glitch:hover::before,
-.glitch:hover::after {
+.glitch::before,
+.glitch::after,
+.glitch-hover:hover::before,
+.glitch-hover:hover::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -21,22 +24,26 @@
   height: 100%;
 }
 
-.glitch::before {
+.glitch::before,
+.glitch-hover::before {
   animation: none;
 }
 
-.glitch:hover::before {
+.glitch::before,
+.glitch-hover:hover::before {
   animation: glitch-anim 5s infinite linear alternate-reverse;
 	text-shadow: -2px 0 #ff00c1;
 	left: 2px;
   clip: rect(44px, 450px, 56px, 0);
 }
 
-.glitch::after {
+.glitch::after,
+.glitch-hover::after {
   animation: none;
 }
 
-.glitch:hover::after {
+.glitch::after,
+.glitch-hover:hover::after {
   animation: glitch-anim2 1s infinite linear alternate-reverse;
 	text-shadow: -2px 0 #ff00c1;
 	text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;

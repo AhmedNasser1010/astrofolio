@@ -1,8 +1,10 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
+// import css files
 import "./css/glitch-effect.css";
 import "./css/noise.css";
+// import "./css/lazy-load-card.css";
 
 // import components
 import Nav from "./Components/Nav.jsx";
@@ -18,13 +20,17 @@ function App() {
 	
 	function navigationEffect() {
 		const noiceWrapper = document.querySelector(".noise-wrapper");
+		const root = document.querySelector("#root");
+		
 		
 		noiceWrapper.style.display = "block";
-		noiseEffect.play();
+		// noiseEffect.play();
+		root.style.filter = "invert(100%)";
 		setTimeout(() => {
 			noiseEffect.pause();
 			noiseEffect.currentTime = 0;
 			noiceWrapper.style.display = "none";
+			root.style.filter = "unset";
 		}, 300);
 	}
 	
