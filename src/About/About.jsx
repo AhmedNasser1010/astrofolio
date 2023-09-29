@@ -18,11 +18,11 @@ function About() {
 							interactive websites. Strong attention to detail and a
 							passion for user experience.
 						</p>
-						<a href="#" className="border mx-auto md:mx-0 px-3.5 py-2 block w-fit mt-4 hover:bg-white hover:text-black hover:rounded duration-300 text-[15px] animate-lazyRight animation-delay-2000 anim-forward opacity-0">Full Resume</a>
+						<a href="https://drive.google.com/file/d/1SQmatZtV8Cqe0VxVPmnsUqFGfQZ93ULG/view?usp=sharing" target="_blank" className="border mx-auto md:mx-0 px-3.5 py-2 block w-fit mt-4 hover:bg-white hover:text-black hover:rounded duration-300 text-[15px] animate-lazyRight animation-delay-2000 anim-forward opacity-0">Full Resume</a>
 					</div>
 					<div className="skills w-full md:w-1/2">
 						<h3 className="font-bold text-xl md:text-[25px] pb-4 animate-lazyRight animation-delay-1000 anim-forward opacity-0">My Current Skills</h3>
-						<div className="flex flex-wrap gap-3 w-4/5 justify-center md:justify-start m-auto md:m-0">
+						<div className="flex max-w-[500px] flex-wrap gap-3 w-4/5 justify-center md:justify-start m-auto md:m-0">
 							<Skill skill="HTML/CSS" delay="animation-delay-2000" />
 							<Skill skill="JavaScript" delay="animation-delay-3000" />
 							<Skill skill="React.JS" delay="animation-delay-3000" />

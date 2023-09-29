@@ -1,6 +1,7 @@
 import Container from "../Components/Container.jsx";
 import WorkTitle from "./WorkTitle.jsx";
 import Preview from './Preview.jsx';
+import works from "../works.js";
 
 function Works() {
 	return (
@@ -12,28 +13,9 @@ function Works() {
 					h-[calc(100%-2rem)] md:h-[100%]
 				">
 					<div className="works-scroll-container scroll-none pl-6 pt-11 flex flex-col overflow-y-scroll h-[calc(100vh-10rem)] md:h-[calc(100%-64px)]">
-						<WorkTitle workTitle="Todo list" year="2023" category="Productivity" newWork={true} perviewImg="https://placehold.co/400x400" />
-						<WorkTitle workTitle="davon" year="2023" category="Landing Page" perviewImg="https://placehold.co/400x401" />
-						<WorkTitle workTitle="wtls toolkit" year="2022" category="Tool" perviewImg="https://placehold.co/400x402" />
-						<WorkTitle workTitle="dashboard" year="2022" category="Admin Panel" perviewImg="https://placehold.co/400x403" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" perviewImg="https://placehold.co/400x404" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leon" year="2022" category="Landing Page" />
-						<WorkTitle workTitle="leonaaaaa" year="2022" category="Landing Page" />
+						{
+							works.map((work, i) => (<WorkTitle key={i} work={work} workTitle={work.title} category={work.categories} newWork={work.newWork} perviewImg={work.imgs[0]} />))
+						}
 					</div>
 				</div>
 				<Preview />
