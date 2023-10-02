@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 // import css files
+import "./index.css";
 import "./css/glitch-effect.css";
 import "./css/noise.css";
 // import "./css/lazy-load-card.css";
