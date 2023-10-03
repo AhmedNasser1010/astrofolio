@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 // import css files
 import "./index.css";
@@ -49,6 +50,7 @@ function App() {
         <Route path="work" element={<Works />} />
         <Route path="work/:projectName" element={<Project />} />
       </Routes>
+			<Analytics />
     </div>
   )
 }
