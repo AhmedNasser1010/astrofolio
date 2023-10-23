@@ -1,11 +1,17 @@
 import Container from "../Components/Container.jsx";
 import WorkTitle from "./WorkTitle.jsx";
 import Preview from './Preview.jsx';
-import works from "../works.js";
+import { works, worksList} from "../works.js";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from 'react';
 
 function Works() {
 	return (
 		<div className="work overflow-hidden bg-midnightBlack h-screen">
+			<Helmet>
+				<title>ASTRO FOLIO | Works</title>
+				<meta name='description' content={`Ahmed's selected works ${worksList.join(",")}`} />
+			</Helmet>
 			<Container>
 				<h1 className="font-horizon text-2xl md:text-4xl pl-6 pt-6"><span className="block md:inline">SELECTED</span> WORKS</h1>
 				<div className="

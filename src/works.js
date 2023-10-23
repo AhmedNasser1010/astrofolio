@@ -117,4 +117,6 @@ const works = [
 	},
 ]
 
-export default works;
+const worksList = ["ToDo App", "Davon School", "WebNexus", "Leon", "Code Ninjas"];
+
+export { works, worksList };

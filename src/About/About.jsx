@@ -1,9 +1,14 @@
 import Container from "../Components/Container.jsx";
 import Skill from "./Skill.jsx";
+import { Helmet } from "react-helmet-async";
 
 function About() {
 	return (
 		<div className="about bg-midnightBlack overflow-hidden">
+			<Helmet>
+				<title>ASTRO FOLIO | About</title>
+				<meta name='description' content='My name is Ahmed Nasser, And i’m a Front end Developer with 1 year of experience in building and maintaining user-facing web applications.' />
+			</Helmet>
 			<Container>
 				<h1 className="text-center pt-20 md:pt-10 pb-14 font-bold text-2xl md:text-3xl animate-lazyDown"><span className="block md:inline">Hi there.</span> Nice to meet you.</h1>
 				<div className="flex pb-10 md:pb-0 px-10 gap-x-20 flex-col md:flex-row text-center md:text-left">

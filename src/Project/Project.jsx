@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import works from "../works.js";
+import { works } from "../works.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Helmet } from "react-helmet-async";
 
 import Container from "../Components/Container.jsx";
 import Image from "./Image.jsx";
@@ -81,6 +82,10 @@ function Project() {
 
 	return (
 		<div className="project h-screen overflow-hidden bg-midnightBlack relative">
+			<Helmet>
+				<title>{`ASTRO FOLIO | ${project.title}`}</title>
+				<meta name='description' content={`${project.description}`} />
+			</Helmet>
 			<Container>
 				<div className="project-grid hidden overflow-scroll-y-shadow-sm scroll-none overflow-y-scroll md:overflow-visible md:grid md:gap-x-6 md:gap-y-8 h-[calc(100vh-6rem)] md:h-[calc(100%-4rem)] w-10/12 mt-8 mx-auto">
 					<h1 data-text={ project.title } className="glitch animation-delay-1000 anim-duration-1000ms grid text-center md:text-left col-start-[5] col-end-[15] row-start-[3] row-end-[4] font-horizon text-2xl md:text-6xl hover:-skew-x-12 hover:translate-x-6 duration-300 cursor-pointer">{ project.title }</h1>
