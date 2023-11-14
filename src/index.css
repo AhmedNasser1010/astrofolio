@@ -65,15 +65,15 @@ body {
 }
 
 .overflow-scroll-y-shadow::before {
-	-webkit-box-shadow: inset 0px -190px 93px -144px #131313;
-	-moz-box-shadow: inset 0px -190px 93px -144px #131313;
-	box-shadow: inset 0px -190px 93px -144px #131313;
+	-webkit-box-shadow: inset 0px -190px 93px -144px #000;
+	-moz-box-shadow: inset 0px -190px 93px -144px #000;
+	box-shadow: inset 0px -190px 93px -144px #000;
 }
 
 .overflow-scroll-y-shadow::after {
-	-webkit-box-shadow: inset 0px 115px 93px -144px #131313;
-	-moz-box-shadow: inset 0px 115px 93px -144px #131313;
-	box-shadow: inset 0px 115px 93px -144px #131313;
+	-webkit-box-shadow: inset 0px 115px 93px -144px #000;
+	-moz-box-shadow: inset 0px 115px 93px -144px #000;
+	box-shadow: inset 0px 115px 93px -144px #000;
 }
 
 .works-container.overflow-scroll-y-shadow::after {

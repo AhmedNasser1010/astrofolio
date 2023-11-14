@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'midnightBlack': '#131313',
+        'midnightBlack': '#000',
         'charcoalGray': '#3F4143',
         'silverSlate': '#717174',
         'mistyGray': '#A3A1A5',
