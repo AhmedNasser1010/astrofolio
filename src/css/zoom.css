@@ -1,0 +1,9 @@
+.zoom-in {
+	width: 60% !important;
+}
+
+@media (max-width: 640px) {
+	.zoom-in {
+		width: 100%;
+	}	
+}

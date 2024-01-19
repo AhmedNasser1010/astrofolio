@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 import "./index.css";
 import "./css/glitch-effect.css";
 import "./css/noise.css";
+import "./css/zoom.css";
 // import "./css/lazy-load-card.css";
 
 // import components

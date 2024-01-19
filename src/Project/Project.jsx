@@ -71,6 +71,12 @@ function Project() {
 		
 	}
 
+	function onZoom(e) {
+		const imgs = document.querySelectorAll(".slide-content");
+
+		imgs.forEach(img => img.classList.toggle("zoom-in"));
+	}
+
 	useEffect(() => {
 		works.map(work => {
 			if (titleFormate(work.title) === projectName) {
@@ -99,14 +105,14 @@ function Project() {
 					<a className="live translate-y-[-20%] opacity-0 anim-forward animation-delay-1000 anim-duration-1000ms animate-lazyUpToDown col-start-[10] col-end-[12] row-start-[6] row-end-[7] md:translate-x-[-45%] xl:translate-x-[-40%] border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px]" href={project.liveLink ? project.liveLink : "#"} target="_blank">Live View</a>
 					<a className="github translate-y-[-20%] opacity-0 anim-forward animation-delay-1000 anim-duration-1000ms animate-lazyUpToDown col-start-[12] col-end-[14] row-start-[6] row-end-[7] translate-x-[-45%] translate-x-[-61%] xl:-translate-x-1/2 border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px]" href={project.github ? project.github : "#"} target="_blank">Github</a>
 					<Link to="/work" className="backBtn translate-y-[-20%] opacity-0 anim-forward animation-delay-1000 anim-duration-1000ms animate-lazyUpToDown col-start-[9] col-end-[10] row-start-[6] row-end-[7] ml-auto border flex items-center justify-center hover:bg-white hover:text-black rounded hover:rounded-xl duration-300 text-[15px] w-5 md:w-1/2">{`<`}</Link>
-					<Image clickEvent={() => onEntr(0)} img={project.imgs ? project.imgs[0] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[2] col-end-[4]" rowStartEnd="row-start-[1] row-end-[3]" animation="animate-lazyDownToUp translate-y-[20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(1)} img={project.imgs ? project.imgs[1] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[4] col-end-[6]" rowStartEnd="row-start-[1] row-end-[3]" animation="animate-lazyDownToUp translate-y-[20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(2)} img={project.imgs ? project.imgs[2] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[1] col-end-[3]" rowStartEnd="row-start-[3] row-end-[5]" animation="animate-lazyDownToUp animation-delay-500 translate-y-[20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(3)} img={project.imgs ? project.imgs[3] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[3] col-end-[5]" rowStartEnd="row-start-[3] row-end-[5]" animation="animate-lazyDownToUp animation-delay-500 translate-y-[20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(4)} img={project.imgs ? project.imgs[4] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[3] col-end-[5]" rowStartEnd="row-start-[5] row-end-[7]" animation="animate-lazyDownToUp animation-delay-2000 translate-y-[20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(5)} img={project.imgs ? project.imgs[5] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[5] col-end-[7]" rowStartEnd="row-start-[4] row-end-[6]" animation="animate-lazyUpToDown animation-delay-500 translate-y-[-20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(6)} img={project.imgs ? project.imgs[6] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[5] col-end-[7]" rowStartEnd="row-start-[6] row-end-[8]" animation="animate-lazyUpToDown animation-delay-2000 translate-y-[-20%] opacity-0 anim-forward" />
-					<Image clickEvent={() => onEntr(7)} img={project.imgs ? project.imgs[7] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[7] col-end-[9]" rowStartEnd="row-start-[6] row-end-[8]" animation="animate-lazyUpToDown animation-delay-2000 translate-y-[-20%] opacity-0 anim-forward" />
+					{ project.imgs && project.imgs[0] && <Image clickEvent={() => onEntr(0)} img={project.imgs ? project.imgs[0] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[2] col-end-[4]" rowStartEnd="row-start-[1] row-end-[3]" animation="animate-lazyDownToUp translate-y-[20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[1] && <Image clickEvent={() => onEntr(1)} img={project.imgs ? project.imgs[1] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[4] col-end-[6]" rowStartEnd="row-start-[1] row-end-[3]" animation="animate-lazyDownToUp translate-y-[20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[2] && <Image clickEvent={() => onEntr(2)} img={project.imgs ? project.imgs[2] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[1] col-end-[3]" rowStartEnd="row-start-[3] row-end-[5]" animation="animate-lazyDownToUp animation-delay-500 translate-y-[20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[3] && <Image clickEvent={() => onEntr(3)} img={project.imgs ? project.imgs[3] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[3] col-end-[5]" rowStartEnd="row-start-[3] row-end-[5]" animation="animate-lazyDownToUp animation-delay-500 translate-y-[20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[4] && <Image clickEvent={() => onEntr(4)} img={project.imgs ? project.imgs[4] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[3] col-end-[5]" rowStartEnd="row-start-[5] row-end-[7]" animation="animate-lazyDownToUp animation-delay-2000 translate-y-[20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[5] && <Image clickEvent={() => onEntr(5)} img={project.imgs ? project.imgs[5] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[5] col-end-[7]" rowStartEnd="row-start-[4] row-end-[6]" animation="animate-lazyUpToDown animation-delay-500 translate-y-[-20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[6] && <Image clickEvent={() => onEntr(6)} img={project.imgs ? project.imgs[6] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[5] col-end-[7]" rowStartEnd="row-start-[6] row-end-[8]" animation="animate-lazyUpToDown animation-delay-2000 translate-y-[-20%] opacity-0 anim-forward" /> }
+					{ project.imgs && project.imgs[7] && <Image clickEvent={() => onEntr(7)} img={project.imgs ? project.imgs[7] : "https://placehold.co/400x400"} alt={project.title} colStartEnd="col-start-[7] col-end-[9]" rowStartEnd="row-start-[6] row-end-[8]" animation="animate-lazyUpToDown animation-delay-2000 translate-y-[-20%] opacity-0 anim-forward" /> }
 				</div>
 				<div className="project-flex flex flex-col md:hidden justify-between items-center h-[calc(100vh-6rem)] w-10/12 mt-8 mx-auto">
 					<h1 data-text={ project.title } className="glitch w-full text-center font-horizon text-2xl duration-300 cursor-pointer">{ project.title && project.title }</h1>
@@ -145,6 +151,11 @@ function Project() {
 						absolute top-[5%] right-[14%] md:right-1/4 z-10
 						text-2xl cursor-pointer
 					" onClick={onExit}></i>
+					<i className="
+						fa-solid fa-magnifying-glass
+						absolute top-[5%] right-[25%] md:right-[30%] z-10
+						text-2xl cursor-pointer
+					" onClick={(e) => onZoom(e)}></i>
 				  <div className='controls'>
 						<button onClick={sliderRef?.slickPrev}>
 							<i className="fa-sharp fa-solid fa-chevron-left"></i>

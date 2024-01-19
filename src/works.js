@@ -17,9 +17,25 @@
 		// liveLink: "",
 		// github: "",
 		// newWork: false,
+		// onGoing: false,
 	// }
 
 const works = [
+	{
+		title: "Ordering Sys",
+		description: "Revolutionize your business management with our innovative web application, ordering systems. Experience seamless administration.",
+		imgs: [
+			"https://i.imgur.com/LdMrTRP.png",
+			"https://i.imgur.com/bYowxmL.png",
+			"https://i.imgur.com/tOzaiai.png",
+		],
+		categories: ["2024", "E-Commerce System"],
+		technologys: ["CSS", "JavaScript", "React.JS", "Redux", "Firebase[Auth, Firestore]"],
+		liveLink: "https://github.com/AhmedNasser1010/ordering-system-admin",
+		github: "https://github.com/AhmedNasser1010/ordering-system-admin",
+		newWork: false,
+		onGoing: true,
+	},
 	{
 		title: "ToDo App",
 		description: "This is a comprehensive React app that allows users to create and manage their to-do lists. The app is responsive and can be used on all devices.",
@@ -37,7 +53,8 @@ const works = [
 		technologys: ["HTML", "CSS", "JS", "React.JS", "Redux", "LocalStorage"],
 		liveLink: "https://todo-ahmed.vercel.app/",
 		github: "https://github.com/AhmedNasser1010/react-todo-app",
-		newWork: true,
+		newWork: false,
+		onGoing: false,
 	},
 	{
 		title: "Davon School",
@@ -57,6 +74,7 @@ const works = [
 		liveLink: "https://ahmednasser1010.github.io/Davon-project/",
 		github: "https://github.com/AhmedNasser1010/Davon-project",
 		newWork: false,
+		onGoing: false,
 	},
 	{
 		title: "WebNexus",
@@ -76,6 +94,7 @@ const works = [
 		liveLink: "https://ahmednasser1010.github.io/WebNexus-Academy/",
 		github: "https://github.com/AhmedNasser1010/WebNexus-Academy",
 		newWork: false,
+		onGoing: false,
 	},
 	{
 		title: "Leon",
@@ -95,6 +114,7 @@ const works = [
 		liveLink: "",
 		github: "https://github.com/AhmedNasser1010/Leon",
 		newWork: false,
+		onGoing: false,
 	},
 	{
 		title: "Code Ninjas",
@@ -114,9 +134,10 @@ const works = [
 		liveLink: "https://ahmednasser1010.github.io/Code-Ninjas/",
 		github: "https://github.com/AhmedNasser1010/Code-Ninjas",
 		newWork: false,
+		onGoing: false,
 	},
 ]
 
-const worksList = ["ToDo App", "Davon School", "WebNexus", "Leon", "Code Ninjas"];
+const worksList = ["Ordering Sys", "ToDo App", "Davon School", "WebNexus", "Leon", "Code Ninjas"];
 
 export { works, worksList };

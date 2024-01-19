@@ -48,6 +48,7 @@ function WorkTitle({ work }) {
 			{ work.title }
 			<span className="whitespace-nowrap ml-1 cursor-pointer font-openSans text-[10px] text-gray-900 bg-lavenderGray rounded-full px-2 py-0.5">{ handleInfoText(work.categories) }</span>
 			{ work.newWork && <span className="cursor-pointer font-openSans text-[10px] text-gray-900 ml-0.5 bg-lavenderGray rounded-full px-2 py-0.5">New!</span> }
+			{ work.onGoing && <span className="cursor-pointer font-openSans text-[10px] text-gray-900 ml-0.5 bg-lavenderGray rounded-full px-2 py-0.5 bg-[#607d8b]">On Going!</span> }
 		</Link>
 	)
 }
